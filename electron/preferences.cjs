@@ -1,0 +1,5 @@
+const fs=require('node:fs/promises'),path=require('node:path'),{atomicWrite}=require('./files.cjs'),{parseRepository}=require('./updates.cjs');
+const defaults={blenderPath:'',repository:'',autoCheck:false};
+function validatePreferences(input){if(!input||typeof input.blenderPath!=='string'||input.blenderPath.length>1024||/[\x00-\x1f]/.test(input.blenderPath)||typeof input.repository!=='string'||typeof input.autoCheck!=='boolean')throw new Error('Invalid preferences.');return{blenderPath:input.blenderPath.trim(),repository:input.repository.trim()?parseRepository(input.repository):'',autoCheck:input.autoCheck};}
+class Preferences{constructor(directory){this.filename=path.join(directory,'preferences.json');this.value={...defaults};}async load(){try{this.value=validatePreferences(JSON.parse(await fs.readFile(this.filename,'utf8')));}catch{this.value={...defaults};}return this.value;}async save(input){const value=validatePreferences(input);await atomicWrite(this.filename,JSON.stringify(value,null,2));this.value=value;return value;}}
+module.exports={Preferences,validatePreferences};

@@ -1,0 +1,391 @@
+{
+  "format": "blockage.scene",
+  "version": 4,
+  "name": "Physics Test",
+  "entities": [
+    {
+      "id": "1d7d59cf-8b63-4b22-b13f-68ce3eb1e4fe",
+      "name": "Ground",
+      "kind": "plane",
+      "parent": null,
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          20,
+          1,
+          20
+        ]
+      },
+      "material": {
+        "color": "#4a4a4a",
+        "metalness": 0,
+        "roughness": 0.75,
+        "emissive": "#000000",
+        "emissiveIntensity": 0,
+        "opacity": 1,
+        "texture": null,
+        "normalTexture": null,
+        "roughnessTexture": null,
+        "metalnessTexture": null,
+        "emissiveTexture": null
+      },
+      "light": {
+        "color": "#ffffff",
+        "intensity": 30,
+        "distance": 16
+      },
+      "behaviors": {},
+      "castShadow": true,
+      "receiveShadow": true,
+      "collider": false,
+      "animation": {
+        "enabled": true,
+        "interpolation": "linear",
+        "keys": []
+      }
+    },
+    {
+      "id": "9df086e0-769f-4ada-a02d-2c9ba92c88ab",
+      "name": "Sun",
+      "kind": "directionalLight",
+      "parent": null,
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          5,
+          9,
+          5
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "material": {
+        "color": "#9da8b8",
+        "metalness": 0.35,
+        "roughness": 0.4,
+        "emissive": "#000000",
+        "emissiveIntensity": 0,
+        "opacity": 1,
+        "texture": null,
+        "normalTexture": null,
+        "roughnessTexture": null,
+        "metalnessTexture": null,
+        "emissiveTexture": null
+      },
+      "light": {
+        "color": "#ffffff",
+        "intensity": 3,
+        "distance": 16
+      },
+      "behaviors": {},
+      "castShadow": true,
+      "receiveShadow": true,
+      "collider": false,
+      "animation": {
+        "enabled": true,
+        "interpolation": "linear",
+        "keys": []
+      }
+    },
+    {
+      "id": "4c3e5389-be63-4b0c-ba22-4b12c94c010c",
+      "name": "Drop Body 1",
+      "kind": "box",
+      "parent": null,
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          -3,
+          3,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "material": {
+        "color": "#8d8d8d",
+        "metalness": 0.35,
+        "roughness": 0.4,
+        "emissive": "#000000",
+        "emissiveIntensity": 0,
+        "opacity": 1,
+        "texture": null,
+        "normalTexture": null,
+        "roughnessTexture": null,
+        "metalnessTexture": null,
+        "emissiveTexture": null
+      },
+      "light": {
+        "color": "#ffffff",
+        "intensity": 30,
+        "distance": 16
+      },
+      "behaviors": {
+        "rigidbody": {
+          "restitution": 0.15,
+          "floor": 0,
+          "mass": 1,
+          "friction": 0.5,
+          "damping": 0.05,
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      },
+      "castShadow": true,
+      "receiveShadow": true,
+      "collider": true,
+      "animation": {
+        "enabled": true,
+        "interpolation": "linear",
+        "keys": []
+      }
+    },
+    {
+      "id": "c3831140-c36f-49f9-89b6-821cccab2c47",
+      "name": "Drop Body 2",
+      "kind": "sphere",
+      "parent": null,
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          -1,
+          4.5,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "material": {
+        "color": "#727272",
+        "metalness": 0.35,
+        "roughness": 0.4,
+        "emissive": "#000000",
+        "emissiveIntensity": 0,
+        "opacity": 1,
+        "texture": null,
+        "normalTexture": null,
+        "roughnessTexture": null,
+        "metalnessTexture": null,
+        "emissiveTexture": null
+      },
+      "light": {
+        "color": "#ffffff",
+        "intensity": 30,
+        "distance": 16
+      },
+      "behaviors": {
+        "rigidbody": {
+          "restitution": 0.35,
+          "floor": 0,
+          "mass": 1,
+          "friction": 0.5,
+          "damping": 0.05,
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      },
+      "castShadow": true,
+      "receiveShadow": true,
+      "collider": true,
+      "animation": {
+        "enabled": true,
+        "interpolation": "linear",
+        "keys": []
+      }
+    },
+    {
+      "id": "a8661414-c9d6-4a0f-90dd-80217ef74b5e",
+      "name": "Drop Body 3",
+      "kind": "box",
+      "parent": null,
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          1,
+          6,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "material": {
+        "color": "#999999",
+        "metalness": 0.35,
+        "roughness": 0.4,
+        "emissive": "#000000",
+        "emissiveIntensity": 0,
+        "opacity": 1,
+        "texture": null,
+        "normalTexture": null,
+        "roughnessTexture": null,
+        "metalnessTexture": null,
+        "emissiveTexture": null
+      },
+      "light": {
+        "color": "#ffffff",
+        "intensity": 30,
+        "distance": 16
+      },
+      "behaviors": {
+        "rigidbody": {
+          "restitution": 0.55,
+          "floor": 0,
+          "mass": 1,
+          "friction": 0.5,
+          "damping": 0.05,
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      },
+      "castShadow": true,
+      "receiveShadow": true,
+      "collider": true,
+      "animation": {
+        "enabled": true,
+        "interpolation": "linear",
+        "keys": []
+      }
+    },
+    {
+      "id": "c61eaa3d-5633-49e6-a2c1-08c22d46a297",
+      "name": "Drop Body 4",
+      "kind": "sphere",
+      "parent": null,
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          3,
+          7.5,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "material": {
+        "color": "#b1b1b1",
+        "metalness": 0.35,
+        "roughness": 0.4,
+        "emissive": "#000000",
+        "emissiveIntensity": 0,
+        "opacity": 1,
+        "texture": null,
+        "normalTexture": null,
+        "roughnessTexture": null,
+        "metalnessTexture": null,
+        "emissiveTexture": null
+      },
+      "light": {
+        "color": "#ffffff",
+        "intensity": 30,
+        "distance": 16
+      },
+      "behaviors": {
+        "rigidbody": {
+          "restitution": 0.7500000000000001,
+          "floor": 0,
+          "mass": 1,
+          "friction": 0.5,
+          "damping": 0.05,
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      },
+      "castShadow": true,
+      "receiveShadow": true,
+      "collider": true,
+      "animation": {
+        "enabled": true,
+        "interpolation": "linear",
+        "keys": []
+      }
+    }
+  ],
+  "assets": [],
+  "timeline": {
+    "duration": 8,
+    "fps": 30,
+    "loop": true
+  },
+  "settings": {
+    "background": "#333333",
+    "fog": 0,
+    "exposure": 1,
+    "bloom": false,
+    "bloomStrength": 0.2,
+    "shadows": true,
+    "grid": true,
+    "ambient": 1
+  },
+  "camera": {
+    "position": [
+      9,
+      6,
+      11
+    ],
+    "target": [
+      0,
+      2,
+      0
+    ]
+  }
+}

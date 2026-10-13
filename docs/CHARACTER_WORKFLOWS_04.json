@@ -1,0 +1,29 @@
+{
+  "checks": [
+    {
+      "name": "native BLEND conversion preserves skeleton and animation clips",
+      "passed": true
+    },
+    {
+      "name": "binary FBX source skeleton and baked clips load",
+      "passed": true
+    },
+    {
+      "name": "humanoid rig generation supplies clips on an imported static mesh",
+      "passed": true
+    },
+    {
+      "name": "bone gizmo edits become saved offsets with one undo gesture",
+      "passed": true
+    },
+    {
+      "name": "SHA release data appears in update dialog without rendering HTML",
+      "passed": true
+    },
+    {
+      "name": "prefab keeps generated rig and bone poses",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

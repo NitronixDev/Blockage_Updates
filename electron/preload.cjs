@@ -1,0 +1,26 @@
+const { contextBridge, ipcRenderer } = require('electron');
+contextBridge.exposeInMainWorld('blockageDesktop', Object.freeze({
+  info: () => ipcRenderer.invoke('blockage:info'),
+  openScene: () => ipcRenderer.invoke('blockage:open'),
+  saveScene: (scene, saveAs = false) => ipcRenderer.invoke('blockage:save', scene, Boolean(saveAs)),
+  importAssets: (folder=false) => ipcRenderer.invoke('blockage:import',Boolean(folder)),
+  preferences:()=>ipcRenderer.invoke('blockage:preferences'),
+  savePreferences:value=>ipcRenderer.invoke('blockage:preferences-save',value),
+  chooseBlender:()=>ipcRenderer.invoke('blockage:choose-blender'),
+  checkUpdates:()=>ipcRenderer.invoke('blockage:update-check'),
+  installUpdate:()=>ipcRenderer.invoke('blockage:update-install'),
+  openUpdateFolder:()=>ipcRenderer.invoke('blockage:update-open'),
+  restartUpdated:()=>ipcRenderer.invoke('blockage:update-restart'),
+  onUpdateProgress:callback=>{const listener=(_event,p)=>callback(p);ipcRenderer.on('blockage:update-progress',listener);return()=>ipcRenderer.removeListener('blockage:update-progress',listener);},
+  onImportProgress:callback=>{const listener=(_event,p)=>callback(p);ipcRenderer.on('blockage:import-progress',listener);return()=>ipcRenderer.removeListener('blockage:import-progress',listener);},
+  savePrefab: (text,name) => ipcRenderer.invoke('blockage:prefab-save',text,name),
+  openPrefab: () => ipcRenderer.invoke('blockage:prefab-open'),
+  autosave: scene => ipcRenderer.invoke('blockage:autosave', scene),
+  recover: () => ipcRenderer.invoke('blockage:recover'),
+  clearRecovery: () => ipcRenderer.invoke('blockage:clear-recovery'),
+  resetScenePath: () => ipcRenderer.invoke('blockage:reset-path'),
+  closeWithRecovery: scene => ipcRenderer.invoke('blockage:close-recovery', scene),
+  markDirty: dirty => ipcRenderer.send('blockage:dirty', Boolean(dirty)),
+  windowAction: action => { if (['minimize', 'maximize', 'close', 'devtools'].includes(action)) ipcRenderer.send('blockage:window', action); },
+  onMenu: callback => { const listener = (_event, action) => callback(action); ipcRenderer.on('blockage:menu', listener); return () => ipcRenderer.removeListener('blockage:menu', listener); }
+}));

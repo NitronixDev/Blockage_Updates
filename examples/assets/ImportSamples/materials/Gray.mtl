@@ -1,0 +1,3 @@
+newmtl Gray
+Kd 0.8 0.8 0.8
+map_Kd checker.png

@@ -1,0 +1,191 @@
+{
+  "format": "blockage.scene",
+  "version": 4,
+  "name": "Untitled",
+  "entities": [
+    {
+      "id": "bfaa19a0-9e6e-4584-a3c4-e0044869edbe",
+      "name": "Cube",
+      "kind": "box",
+      "parent": null,
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          0,
+          0.5,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "material": {
+        "color": "#a5a5a5",
+        "metalness": 0,
+        "roughness": 0.55,
+        "emissive": "#000000",
+        "emissiveIntensity": 0,
+        "opacity": 1,
+        "texture": null,
+        "normalTexture": null,
+        "roughnessTexture": null,
+        "metalnessTexture": null,
+        "emissiveTexture": null
+      },
+      "light": {
+        "color": "#ffffff",
+        "intensity": 30,
+        "distance": 16
+      },
+      "behaviors": {},
+      "castShadow": true,
+      "receiveShadow": true,
+      "collider": true,
+      "animation": {
+        "enabled": true,
+        "interpolation": "linear",
+        "keys": []
+      }
+    },
+    {
+      "id": "fcd5ffc5-cb2d-45cb-9d0c-4abf35c93442",
+      "name": "Ground",
+      "kind": "plane",
+      "parent": null,
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          20,
+          1,
+          20
+        ]
+      },
+      "material": {
+        "color": "#4a4a4a",
+        "metalness": 0,
+        "roughness": 0.75,
+        "emissive": "#000000",
+        "emissiveIntensity": 0,
+        "opacity": 1,
+        "texture": null,
+        "normalTexture": null,
+        "roughnessTexture": null,
+        "metalnessTexture": null,
+        "emissiveTexture": null
+      },
+      "light": {
+        "color": "#ffffff",
+        "intensity": 30,
+        "distance": 16
+      },
+      "behaviors": {},
+      "castShadow": true,
+      "receiveShadow": true,
+      "collider": false,
+      "animation": {
+        "enabled": true,
+        "interpolation": "linear",
+        "keys": []
+      }
+    },
+    {
+      "id": "ac8524a0-c27d-4ec8-86a9-6c8612361323",
+      "name": "Sun",
+      "kind": "directionalLight",
+      "parent": null,
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          5,
+          9,
+          5
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "material": {
+        "color": "#9da8b8",
+        "metalness": 0.35,
+        "roughness": 0.4,
+        "emissive": "#000000",
+        "emissiveIntensity": 0,
+        "opacity": 1,
+        "texture": null,
+        "normalTexture": null,
+        "roughnessTexture": null,
+        "metalnessTexture": null,
+        "emissiveTexture": null
+      },
+      "light": {
+        "color": "#ffffff",
+        "intensity": 3,
+        "distance": 16
+      },
+      "behaviors": {},
+      "castShadow": true,
+      "receiveShadow": true,
+      "collider": false,
+      "animation": {
+        "enabled": true,
+        "interpolation": "linear",
+        "keys": []
+      }
+    }
+  ],
+  "assets": [],
+  "timeline": {
+    "duration": 8,
+    "fps": 30,
+    "loop": true
+  },
+  "settings": {
+    "background": "#333333",
+    "fog": 0,
+    "exposure": 1,
+    "bloom": false,
+    "bloomStrength": 0.2,
+    "shadows": true,
+    "grid": true,
+    "ambient": 1
+  },
+  "camera": {
+    "position": [
+      7,
+      5,
+      7
+    ],
+    "target": [
+      0,
+      0.75,
+      0
+    ]
+  }
+}

@@ -1,0 +1,204 @@
+{
+  "format": "blockage.scene",
+  "version": 4,
+  "name": "Fluid Test",
+  "entities": [
+    {
+      "id": "40f2f899-5edf-4ddc-9f1d-3bbe349658c8",
+      "name": "Ground",
+      "kind": "plane",
+      "parent": null,
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          20,
+          1,
+          20
+        ]
+      },
+      "material": {
+        "color": "#4a4a4a",
+        "metalness": 0,
+        "roughness": 0.75,
+        "emissive": "#000000",
+        "emissiveIntensity": 0,
+        "opacity": 1,
+        "texture": null,
+        "normalTexture": null,
+        "roughnessTexture": null,
+        "metalnessTexture": null,
+        "emissiveTexture": null
+      },
+      "light": {
+        "color": "#ffffff",
+        "intensity": 30,
+        "distance": 16
+      },
+      "behaviors": {},
+      "castShadow": true,
+      "receiveShadow": true,
+      "collider": false,
+      "animation": {
+        "enabled": true,
+        "interpolation": "linear",
+        "keys": []
+      }
+    },
+    {
+      "id": "4d73c09d-dad4-4e80-bc27-361e7c356509",
+      "name": "Sun",
+      "kind": "directionalLight",
+      "parent": null,
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          5,
+          9,
+          5
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "material": {
+        "color": "#9da8b8",
+        "metalness": 0.35,
+        "roughness": 0.4,
+        "emissive": "#000000",
+        "emissiveIntensity": 0,
+        "opacity": 1,
+        "texture": null,
+        "normalTexture": null,
+        "roughnessTexture": null,
+        "metalnessTexture": null,
+        "emissiveTexture": null
+      },
+      "light": {
+        "color": "#ffffff",
+        "intensity": 3,
+        "distance": 16
+      },
+      "behaviors": {},
+      "castShadow": true,
+      "receiveShadow": true,
+      "collider": false,
+      "animation": {
+        "enabled": true,
+        "interpolation": "linear",
+        "keys": []
+      }
+    },
+    {
+      "id": "27e52269-114f-4d0f-83a4-4dab181f1499",
+      "name": "Fluid",
+      "kind": "fluid",
+      "parent": null,
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          2.1,
+          0.03,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "material": {
+        "color": "#4f87ac",
+        "metalness": 0,
+        "roughness": 0.2,
+        "emissive": "#000000",
+        "emissiveIntensity": 0,
+        "opacity": 1,
+        "texture": null,
+        "normalTexture": null,
+        "roughnessTexture": null,
+        "metalnessTexture": null,
+        "emissiveTexture": null
+      },
+      "light": {
+        "color": "#ffffff",
+        "intensity": 30,
+        "distance": 16
+      },
+      "behaviors": {},
+      "castShadow": false,
+      "receiveShadow": true,
+      "collider": false,
+      "simulation": {
+        "width": 2.5,
+        "height": 3,
+        "depth": 2.5,
+        "count": 216,
+        "radius": 0.12,
+        "gravity": 9.81,
+        "viscosity": 0.08,
+        "substeps": 2,
+        "iterations": 3,
+        "collisions": true,
+        "display": "surface"
+      },
+      "animation": {
+        "enabled": true,
+        "interpolation": "linear",
+        "keys": []
+      }
+    }
+  ],
+  "assets": [],
+  "timeline": {
+    "duration": 8,
+    "fps": 30,
+    "loop": true
+  },
+  "settings": {
+    "background": "#333333",
+    "fog": 0,
+    "exposure": 1,
+    "bloom": false,
+    "bloomStrength": 0.2,
+    "shadows": true,
+    "grid": true,
+    "ambient": 1
+  },
+  "camera": {
+    "position": [
+      11,
+      8,
+      12
+    ],
+    "target": [
+      -0.5,
+      1.5,
+      0
+    ]
+  }
+}

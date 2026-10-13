@@ -1,0 +1,32 @@
+{
+  "name": "blockage-engine",
+  "productName": "Blockage",
+  "version": "0.4.0",
+  "description": "3D editor with model imports, skinning, character control and GitHub updates",
+  "type": "module",
+  "main": "electron/main.cjs",
+  "private": true,
+  "license": "MIT",
+  "engines": {
+    "node": ">=26.11.1"
+  },
+  "packageManager": "npm@12.2.0",
+  "scripts": {
+    "start": "electron .",
+    "start:vulkan": "electron . --blockage-vulkan",
+    "start:compat": "electron . --blockage-webgl",
+    "play": "electron . --blockage-player",
+    "test": "node --test",
+    "check": "node scripts/check.mjs",
+    "doctor": "node scripts/doctor.mjs",
+    "preview": "node scripts/preview.mjs",
+    "examples": "node scripts/generate-examples.mjs",
+    "release": "node scripts/package-release.mjs"
+  },
+  "dependencies": {
+    "three": "0.186.1"
+  },
+  "devDependencies": {
+    "electron": "44.7.0"
+  }
+}
