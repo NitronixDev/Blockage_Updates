@@ -1,6 +1,0 @@
-node_modules/
-runtime/
-release/
-.portable-node/
-*.tmp
-*.blend1
